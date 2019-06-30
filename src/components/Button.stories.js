@@ -48,4 +48,14 @@ storiesOf("Components/Button", module)
         Large
       </Button>
     </>
+  ))
+  .add("loading", () => (
+    <>
+      <Button loading variant="primary" {...defaultProps}>
+        Submit
+      </Button>
+      <Button loading variant="secondary" {...defaultProps}>
+        Submit
+      </Button>
+    </>
   ));

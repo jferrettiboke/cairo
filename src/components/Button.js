@@ -82,7 +82,7 @@ function LoadingDots() {
 export default function Button({
   size,
   variant,
-  loading = true,
+  loading = false,
   sx,
   children,
   ...rest
