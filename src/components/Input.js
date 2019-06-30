@@ -6,9 +6,9 @@ const placeholderStyle = {
   opacity: 1
 };
 
-function Input({ sx, ...rest }) {
+function Input({ as: Component, sx, ...rest }) {
   return (
-    <input
+    <Component
       sx={{
         appearance: "none",
         backgroundColor: "white",
@@ -46,5 +46,9 @@ function Input({ sx, ...rest }) {
     />
   );
 }
+
+Input.defaultProps = {
+  as: "input"
+};
 
 export default Input;
