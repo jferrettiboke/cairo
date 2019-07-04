@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 
-import Box from "./Box";
+import Box from "../Box";
 import Input from "./Input";
 
 function CenterDecorator(storyFn) {
@@ -25,7 +25,7 @@ const defaultProps = {
   }
 };
 
-storiesOf("Components/Input", module)
+storiesOf("Components/Forms/Input", module)
   .addDecorator(CenterDecorator)
   .add("normal", () => (
     <>

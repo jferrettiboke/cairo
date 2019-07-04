@@ -1,8 +1,8 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 
-import Box from "./Box";
-import Textarea from "./Textarea";
+import Box from "../Box";
+import Input from "./Input";
 
 function CenterDecorator(storyFn) {
   return (
@@ -25,14 +25,14 @@ const defaultProps = {
   }
 };
 
-storiesOf("Components/Textarea", module)
+storiesOf("Components/Forms/Input", module)
   .addDecorator(CenterDecorator)
   .add("normal", () => (
     <>
-      <Textarea {...defaultProps} />
-      <Textarea placeholder="Your email" {...defaultProps} />
-      <Textarea value="john@gmail.com" {...defaultProps} />
+      <Input {...defaultProps} />
+      <Input placeholder="Your email" {...defaultProps} />
+      <Input value="john@gmail.com" {...defaultProps} />
     </>
   ))
-  .add("disabled", () => <Textarea value="john@gmail.com" disabled />)
-  .add("read-only", () => <Textarea value="john@gmail.com" readOnly />);
+  .add("disabled", () => <Input value="john@gmail.com" disabled />)
+  .add("read-only", () => <Input value="john@gmail.com" readOnly />);

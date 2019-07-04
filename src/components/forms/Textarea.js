@@ -6,9 +6,9 @@ const placeholderStyle = {
   opacity: 1
 };
 
-function Input({ as: Component, sx, ...rest }) {
+function Textarea({ sx, ...rest }) {
   return (
-    <Component
+    <textarea
       sx={{
         appearance: "none",
         backgroundColor: "white",
@@ -47,8 +47,4 @@ function Input({ as: Component, sx, ...rest }) {
   );
 }
 
-Input.defaultProps = {
-  as: "input"
-};
-
-export default Input;
+export default Textarea;
