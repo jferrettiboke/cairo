@@ -7,10 +7,10 @@
   "dependencies": {
     "@emotion/core": "^10.0.14",
     "@mdx-js/react": "^1.0.21",
-    "theme-ui": "^0.2.0"
+    "theme-ui": "^0.2.5"
   },
   "devDependencies": {
-    "@babel/core": "^7.4.5",
+    "@babel/core": "^7.5.0",
     "@storybook/addon-actions": "^5.1.9",
     "@storybook/addon-links": "^5.1.9",
     "@storybook/addons": "^5.1.9",
