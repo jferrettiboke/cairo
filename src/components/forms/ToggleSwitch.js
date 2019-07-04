@@ -1,11 +1,6 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
 
-const placeholderStyle = {
-  color: "gray.400",
-  opacity: 1
-};
-
 function ToggleSwitch({ checked }) {
   return (
     <label
@@ -65,9 +60,5 @@ function ToggleSwitch({ checked }) {
     </label>
   );
 }
-
-// ToggleSwitch.defaultProps = {
-//   checked: false
-// };
 
 export default ToggleSwitch;
