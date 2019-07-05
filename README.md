@@ -5,7 +5,7 @@
 I make products, and it is tedious to write and maintain components across products. Having one central design system improves the workflow.
 
 - Build products and iterate faster
-- Waste less time maintaining design systems across products
+- Waste less time maintaining design systems for each product
 - Keep consistency across products
 - Accessibility: ensuring content is usable by and for everyone
 - Performance: ensuring fast load times for the end user
