@@ -19,17 +19,23 @@ function CenterDecorator(storyFn) {
   );
 }
 
+const defaultProps = {
+  sx: {
+    my: 5
+  }
+};
+
 storiesOf("Components/Forms/ToggleSwitch", module)
   .addDecorator(CenterDecorator)
   .add("normal", () => (
     <>
-      <Box sx={{ my: "5" }}>
+      <Box {...defaultProps}>
         <ToggleSwitch />
       </Box>
-      <Box sx={{ my: "5" }}>
+      <Box {...defaultProps}>
         <ToggleSwitch checked />
       </Box>
-      <Box sx={{ my: "5" }}>
+      <Box {...defaultProps}>
         <ToggleSwitch checked={false} />
       </Box>
     </>
