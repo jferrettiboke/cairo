@@ -53,18 +53,19 @@ export default function Button({
         // Raw
         border: "none",
         cursor: "pointer",
+        fontWeight: "bold",
         m: 0,
         p: 0,
-
         // Theme
         bg: "transparent",
         borderRadius: "default",
         fontFamily: "sans",
         letterSpacing: "2",
         lineHeight: "none",
-
+        // Custom props
         ...(variants[variant] || variants.secondary),
         ...(sizes[size] || sizes.md),
+        // Extend
         ...sx
       }}
       {...rest}
