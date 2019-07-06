@@ -41,6 +41,7 @@ const variants = {
 export default function Button({
   size,
   variant,
+  block = false,
   loading = false,
   sx,
   children,
@@ -64,6 +65,10 @@ export default function Button({
         // Custom props
         ...(variants[variant] || variants.secondary),
         ...(sizes[size] || sizes.md),
+        ...(block && {
+          display: "block",
+          width: "full"
+        }),
         // Extend
         ...sx
       }}
