@@ -290,7 +290,9 @@ export default {
       fontWeight: "normal",
       lineHeight: "normal",
       m: 0,
-      p: 0
+      p: 0,
+      WebkitFontSmoothing: "antialiased",
+      MozOsxFontSmoothing: "grayscale"
     }
   }
 };
