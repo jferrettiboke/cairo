@@ -29,11 +29,11 @@ storiesOf("Components/Forms/Label", module)
     <>
       <Group>
         <Label for="firstName">First name</Label>
-        <Input id="firstName" placeholder="Your first name" />
+        <Input id="firstName" />
       </Group>
       <Group>
         <Label for="lastName">Last name</Label>
-        <Input id="lastName" placeholder="Your last name" />
+        <Input id="lastName" />
       </Group>
       <Group>
         <Button block variant="primary">

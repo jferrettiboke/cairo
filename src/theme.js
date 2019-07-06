@@ -20,6 +20,45 @@ const space = {
   "64": "16rem"
 };
 
+const placeholderStyle = {
+  color: "gray.400",
+  opacity: 1
+};
+
+const fieldStyles = {
+  appearance: "none",
+  backgroundColor: "white",
+  border: "1px solid",
+  borderColor: "gray.300",
+  borderRadius: "default",
+  boxSizing: "border-box",
+  boxShadow: "default",
+  color: "black",
+  fontFamily: "sans",
+  fontWeight: "normal",
+  fontSize: "base",
+  lineHeight: "normal",
+  outline: "none",
+  py: "3",
+  px: "4",
+  width: "full",
+  "&:focus": {
+    borderColor: "gray.500"
+  },
+  "&:read-only": {
+    borderColor: "gray.200",
+    color: "gray.500"
+  },
+  "&:disabled": {
+    borderColor: "gray.200",
+    color: "gray.400",
+    cursor: "not-allowed"
+  },
+  "&::-webkit-input-placeholder": placeholderStyle,
+  "&::-moz-placeholder": placeholderStyle,
+  "&:-ms-input-placeholder": placeholderStyle
+};
+
 export default {
   // breakpoints: {
   //   sm: "640px",
@@ -293,6 +332,17 @@ export default {
       p: 0,
       WebkitFontSmoothing: "antialiased",
       MozOsxFontSmoothing: "grayscale"
+    }
+  },
+  components: {
+    input: {
+      default: { ...fieldStyles }
+    },
+    select: {
+      default: { ...fieldStyles }
+    },
+    textarea: {
+      default: { ...fieldStyles }
     }
   }
 };
