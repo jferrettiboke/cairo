@@ -2,7 +2,9 @@
   "private": true,
   "scripts": {
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "now-build": "build-storybook",
+    "now-dev": "start-storybook -p $PORT"
   },
   "dependencies": {
     "@emotion/core": "^10.0.14",
