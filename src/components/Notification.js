@@ -7,16 +7,16 @@ const variants = {
     border: "1px solid",
     // Theme
     bg: "white",
-    borderColor: "gray.200"
+    borderColor: "gray.200",
+    color: "black"
   },
   success: {
-    bg: "green.400"
+    bg: "blue.600",
+    color: "white"
   },
   error: {
-    bg: "red.400"
-  },
-  warning: {
-    bg: "yellow.400"
+    bg: "red.600",
+    color: "white"
   }
 };
 

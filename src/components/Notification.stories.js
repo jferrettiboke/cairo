@@ -36,8 +36,5 @@ storiesOf("Components/Notification", module)
       <Notification variant="error" {...defaultProps}>
         Error!
       </Notification>
-      <Notification variant="warning" {...defaultProps}>
-        Warning!
-      </Notification>
     </>
   ));
