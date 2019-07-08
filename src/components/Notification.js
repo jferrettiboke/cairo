@@ -26,7 +26,7 @@ export default function Notification({ sx, variant, ...rest }) {
       sx={{
         // Theme
         borderRadius: "default",
-        boxShadow: "lg",
+        boxShadow: "md",
         p: "5",
         width: "full",
         // Custom,
