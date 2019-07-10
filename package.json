@@ -9,6 +9,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.14",
     "@mdx-js/react": "^1.0.21",
+    "framer-motion": "^1.2.1",
     "theme-ui": "^0.2.5"
   },
   "devDependencies": {
