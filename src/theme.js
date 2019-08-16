@@ -334,7 +334,7 @@ export default {
       MozOsxFontSmoothing: "grayscale"
     }
   },
-  components: {
+  styles: {
     input: {
       default: { ...fieldStyles }
     },

@@ -1,10 +1,9 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui";
-import theme from "../../theme";
 
 function Textarea({ sx, ...rest }) {
   return (
-    <textarea sx={{ ...theme.components.input.default, ...sx }} {...rest} />
+    <textarea sx={{ variant: "styles.textarea.default", ...sx }} {...rest} />
   );
 }
 
