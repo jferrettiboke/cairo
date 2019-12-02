@@ -7,18 +7,18 @@
     "now-dev": "start-storybook -p $PORT"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.14",
-    "@mdx-js/react": "^1.0.21",
-    "framer-motion": "^1.2.1",
-    "react-icons": "^3.7.0",
-    "theme-ui": "^0.2.5"
+    "@emotion/core": "^10.0.22",
+    "@mdx-js/react": "^1.5.1",
+    "framer-motion": "^1.6.17",
+    "react-icons": "^3.8.0",
+    "theme-ui": "^0.2.49"
   },
   "devDependencies": {
-    "@babel/core": "^7.5.0",
-    "@storybook/addon-actions": "^5.1.9",
-    "@storybook/addon-links": "^5.1.9",
-    "@storybook/addons": "^5.1.9",
-    "@storybook/react": "^5.1.9",
+    "@babel/core": "^7.7.4",
+    "@storybook/addon-actions": "^5.2.8",
+    "@storybook/addon-links": "^5.2.8",
+    "@storybook/addons": "^5.2.8",
+    "@storybook/react": "^5.2.8",
     "babel-loader": "^8.0.6"
   }
 }
