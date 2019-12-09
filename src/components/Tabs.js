@@ -1,4 +1,5 @@
 import React from "react";
+
 import Box from "./Box";
 
 export function Tabs({ sx, ...rest }) {
@@ -9,7 +10,7 @@ export function Tabs({ sx, ...rest }) {
         display: "flex",
         justifyContent: "center",
         borderBottom: "1px solid",
-        borderColor: "gray.200",
+        borderColor: "divider",
         ...sx
       }}
       {...rest}
@@ -20,7 +21,6 @@ export function Tabs({ sx, ...rest }) {
 export function Tab({ children, badge, active = false, sx, ...rest }) {
   return (
     <Box
-      as="a"
       sx={{
         // Raw
         display: "block",
@@ -34,13 +34,13 @@ export function Tab({ children, badge, active = false, sx, ...rest }) {
         px: "8",
         py: "3",
         "&:hover": {
-          color: "black"
+          color: "text"
         },
         // Custom
         ...(active && {
-          color: "black",
+          color: "text",
           fontWeight: "bold",
-          borderColor: "black"
+          borderColor: "text"
         }),
         // Extend
         ...sx

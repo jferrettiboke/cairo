@@ -1,9 +1,10 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui";
+import React from "react";
+import Box from "./Box";
 
 export function List({ sx, ...rest }) {
   return (
-    <ul
+    <Box
+      as="ul"
       sx={{
         listStyle: "none",
         padding: 0,
@@ -11,12 +12,13 @@ export function List({ sx, ...rest }) {
         width: "full",
         "& > li": {
           borderTop: "1px solid",
-          borderColor: "gray.300",
-          p: "3"
+          borderColor: "divider",
+          p: "3",
+          px: "5"
         },
         "& > li:last-child": {
           borderBottom: "1px solid",
-          borderColor: "gray.300"
+          borderColor: "divider"
         }
       }}
       {...rest}
@@ -26,7 +28,8 @@ export function List({ sx, ...rest }) {
 
 export function ListItem({ sx, ...rest }) {
   return (
-    <li
+    <Box
+      as="li"
       sx={{
         display: "flex",
         alignItems: "center",

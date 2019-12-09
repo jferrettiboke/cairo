@@ -1,23 +1,10 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui";
+import React from "react";
+import { useThemeUI } from "theme-ui";
 
-function Label({ sx, ...rest }) {
-  return (
-    <label
-      sx={{
-        // Raw
-        display: "block",
-        fontWeight: "bold",
-        // Theme
-        color: "gray.700",
-        fontSize: "sm",
-        mb: "2",
-        // Extend
-        ...sx
-      }}
-      {...rest}
-    />
-  );
+import Box from "../Box";
+
+export default function Label({ sx, ...rest }) {
+  const { theme } = useThemeUI();
+  const { label } = theme.forms;
+  return <Box as="label" sx={{ ...label, ...sx }} {...rest} />;
 }
-
-export default Label;

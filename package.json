@@ -9,7 +9,12 @@
   "dependencies": {
     "@emotion/core": "^10.0.22",
     "@mdx-js/react": "^1.5.1",
+    "@theme-ui/components": "^0.2.49",
+    "@theme-ui/match-media": "^0.2.49",
+    "@theme-ui/prism": "^0.2.50",
+    "@theme-ui/style-guide": "^0.2.49",
     "framer-motion": "^1.6.17",
+    "lodash.get": "^4.4.2",
     "react-icons": "^3.8.0",
     "theme-ui": "^0.2.49"
   },

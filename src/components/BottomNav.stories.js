@@ -10,7 +10,7 @@ import {
 
 import { BottomNav, BottomNavLink } from "./BottomNav";
 
-storiesOf("Components/BottomNav", module).add("default", () => (
+storiesOf("Labs/BottomNav", module).add("default", () => (
   <BottomNav sx={{ position: "absolute", bottom: 0, left: 0, right: 0 }}>
     <BottomNavLink href="#" icon={<FaRegPaperPlane />}>
       Explore

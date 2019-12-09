@@ -1,37 +1,16 @@
 import React from "react";
+import { useThemeUI } from "theme-ui";
+
 import Box from "./Box";
 
-const variants = {
-  default: {
-    // Raw
-    border: "1px solid",
-    // Theme
-    bg: "white",
-    borderColor: "gray.200",
-    color: "black"
-  },
-  success: {
-    bg: "blue.600",
-    color: "white"
-  },
-  error: {
-    bg: "red.600",
-    color: "white"
-  }
-};
-
-export default function Notification({ sx, variant, ...rest }) {
+export default function Notification({ sx, kind, ...rest }) {
+  const { theme } = useThemeUI();
+  const { kinds } = theme.notifications;
   return (
     <Box
       sx={{
-        // Theme
-        borderRadius: "default",
-        boxShadow: "md",
-        p: "5",
-        width: "full",
-        // Custom,
-        ...(variants[variant] || variants.default),
-        // Extend
+        ...kinds._common,
+        ...kinds[kind || kinds._default],
         ...sx
       }}
       {...rest}

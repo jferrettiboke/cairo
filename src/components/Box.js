@@ -1,20 +1,6 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui";
+import React from "react";
+import { Box as TUI_Box } from "@theme-ui/components";
 
-function Box({ as: Component, sx, ...rest }) {
-  return (
-    <Component
-      sx={{
-        boxSizing: "border-box",
-        ...sx
-      }}
-      {...rest}
-    />
-  );
+export default function Box({ sx, ...rest }) {
+  return <TUI_Box sx={sx} {...rest} />;
 }
-
-Box.defaultProps = {
-  as: "div"
-};
-
-export default Box;

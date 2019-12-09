@@ -33,13 +33,13 @@ storiesOf("Components/Badge", module)
       <Badge {...defaultProps}>50</Badge>
       <Badge {...defaultProps}>150</Badge>
       <Badge {...defaultProps}>New</Badge>
-      <Badge variant="success" {...defaultProps}>
+      <Badge kind="success" {...defaultProps}>
         1
       </Badge>
-      <Badge variant="error" {...defaultProps}>
+      <Badge kind="error" {...defaultProps}>
         5
       </Badge>
-      <Badge variant="warning" {...defaultProps}>
+      <Badge kind="warning" {...defaultProps}>
         50
       </Badge>
     </>

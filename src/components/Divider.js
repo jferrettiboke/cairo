@@ -1,20 +1,16 @@
-/** @jsx jsx */
-import { jsx, Styled } from "theme-ui";
+import React from "react";
+import { useThemeUI } from "theme-ui";
 
-export default function Divider({ sx, ...rest }) {
+import Box from "./Box";
+
+export default function Divider({ kind, sx, ...rest }) {
+  const { theme } = useThemeUI();
+  const { kinds } = theme.dividers;
   return (
-    <hr
+    <Box
+      as="hr"
       sx={{
-        // Raw
-        p: 0,
-        m: 0,
-        height: 0,
-        border: "none",
-        borderBottom: "1px solid",
-        // Theme
-        borderColor: "gray.300",
-        width: "full",
-        // Extend
+        ...kinds[kind || kinds._default],
         ...sx
       }}
       {...rest}

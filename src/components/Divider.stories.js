@@ -22,26 +22,17 @@ function CenterDecorator(storyFn) {
 
 storiesOf("Components/Divider", module)
   .addDecorator(CenterDecorator)
-  .add("default", () => <Divider />)
-  .add("with custom styles", () => (
-    <Box
-      sx={{
-        p: "10",
-        bg: "black",
-        color: "white",
-        borderRadius: "lg",
-        boxShadow: "xl"
-      }}
-    >
+  .add("default", () => (
+    <>
       <Paragraph sx={{ fontSize: "2xl", fontWeight: "700" }}>
         Suspendisse cursus augue vulputate, elementum dolor sit amet, sagittis
         elit.
       </Paragraph>
-      <Divider sx={{ borderColor: "gray.900", my: "8" }} />
+      <Divider sx={{ my: "8" }} />
       <Paragraph>
         Cras semper mauris ligula, ac volutpat enim vehicula non. Morbi ex dui,
         facilisis pharetra accumsan id, porttitor vitae velit. Sed luctus felis
         a eros viverra, ut sollicitudin risus ultricies.
       </Paragraph>
-    </Box>
+    </>
   ));

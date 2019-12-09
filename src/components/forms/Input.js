@@ -1,8 +1,10 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui";
+import React from "react";
+import { useThemeUI } from "theme-ui";
 
-function Input({ sx, ...rest }) {
-  return <input sx={{ variant: "styles.input.default", ...sx }} {...rest} />;
+import Box from "../Box";
+
+export default function Input({ sx, ...rest }) {
+  const { theme } = useThemeUI();
+  const { input } = theme.forms;
+  return <Box as="input" sx={{ ...input, ...sx }} {...rest} />;
 }
-
-export default Input;

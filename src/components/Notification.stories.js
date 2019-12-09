@@ -21,22 +21,19 @@ function CenterDecorator(storyFn) {
   );
 }
 
-const defaultProps = {
-  sx: {
-    my: "10"
-  }
-};
-
 storiesOf("Components/Notification", module)
   .addDecorator(CenterDecorator)
-  .add("variants", () => (
+  .add("kinds", () => (
     <>
-      <Notification {...defaultProps}>Default</Notification>
-      <Notification variant="success" {...defaultProps}>
-        Success!
+      <Notification sx={{ m: 2 }}>Default</Notification>
+      <Notification kind="success" sx={{ m: 2 }}>
+        Success
       </Notification>
-      <Notification variant="error" {...defaultProps}>
-        Error!
+      <Notification kind="error" sx={{ m: 2 }}>
+        Error
+      </Notification>
+      <Notification kind="warning" sx={{ m: 2 }}>
+        Warning
       </Notification>
     </>
   ))
@@ -47,7 +44,6 @@ storiesOf("Components/Notification", module)
         <>
           <Toaster />
           <Button
-            block
             sx={{ m: "3" }}
             onClick={() =>
               toaster.add({
@@ -60,9 +56,7 @@ storiesOf("Components/Notification", module)
                     }}
                   >
                     <Box>Hello world</Box>
-                    <Button variant="primary" size="sm">
-                      Action
-                    </Button>
+                    <Button size="sm">Action</Button>
                   </Box>
                 )
               })
@@ -71,11 +65,10 @@ storiesOf("Components/Notification", module)
             Show message
           </Button>
           <Button
-            block
             sx={{ m: "3" }}
             onClick={() =>
               toaster.add({
-                variant: "success",
+                kind: "success",
                 content: "Great! You just set up your new account."
               })
             }
@@ -83,16 +76,26 @@ storiesOf("Components/Notification", module)
             Show success
           </Button>
           <Button
-            block
             sx={{ m: "3" }}
             onClick={() =>
               toaster.add({
-                variant: "error",
+                kind: "error",
                 content: "Opss! Something went wrong."
               })
             }
           >
             Show error
+          </Button>
+          <Button
+            sx={{ m: "3" }}
+            onClick={() =>
+              toaster.add({
+                kind: "warning",
+                content: "Warning!"
+              })
+            }
+          >
+            Show warning
           </Button>
         </>
       );

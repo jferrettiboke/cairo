@@ -1,18 +1,17 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui";
+import React from "react";
+import { useThemeUI } from "theme-ui";
 
-function Link({ sx, ...rest }) {
+import Box from "./Box";
+
+function Link({ sx, kind, ...rest }) {
+  const { theme } = useThemeUI();
+  const { kinds } = theme.links;
   return (
-    <a
+    <Box
+      as="a"
       sx={{
-        color: "gray.700",
-        fontFamily: "sans",
-        fontSize: "base",
-        fontWeight: "bold",
-        textDecoration: "none",
-        "&:hover": {
-          textDecoration: "underline"
-        }
+        ...kinds[kind || kinds._default],
+        ...sx
       }}
       {...rest}
     />

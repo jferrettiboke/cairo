@@ -11,15 +11,13 @@ const styles = {
   }
 };
 
-function Text({ as = "span", bold = false, truncate = false, sx, ...rest }) {
+function Text({ bold = false, truncate = false, sx, ...rest }) {
   return (
     <Box
-      as={as}
+      as="span"
       sx={{
-        // Custom
         ...(bold && styles.bold),
         ...(truncate && styles.truncate),
-        // Extend
         ...sx
       }}
       {...rest}

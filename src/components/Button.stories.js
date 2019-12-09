@@ -19,70 +19,61 @@ function CenterDecorator(storyFn) {
   );
 }
 
-const defaultProps = {
-  sx: {
-    my: "5",
-    display: "block"
-  }
-};
-
 storiesOf("Components/Button", module)
   .addDecorator(CenterDecorator)
-  .add("variants", () => (
-    <Box>
-      <Button variant="primary" {...defaultProps}>
-        Primary
-      </Button>
-      <Button variant="secondary" {...defaultProps}>
-        Secondary (default)
-      </Button>
-    </Box>
-  ))
+  .add("types", () => {
+    return (
+      <Box>
+        <Button as="a" sx={{ mx: 2 }}>
+          Link
+        </Button>
+        <Button sx={{ mx: 2 }}>Button</Button>
+      </Box>
+    );
+  })
+  .add("kinds", () => {
+    return (
+      <Box>
+        <Button kind="primary" sx={{ mx: 2 }}>
+          Primary
+        </Button>
+        <Button kind="secondary" sx={{ mx: 2 }}>
+          Secondary
+        </Button>
+      </Box>
+    );
+  })
   .add("sizes", () => (
     <Box>
-      <Button variant="primary" size="sm" {...defaultProps}>
+      <Button size="sm" kind="primary" sx={{ mx: 2 }}>
         Small
       </Button>
-      <Button variant="primary" {...defaultProps}>
+      <Button size="md" kind="primary" sx={{ mx: 2 }}>
         Medium
       </Button>
-      <Button variant="primary" size="lg" {...defaultProps}>
-        Large
-      </Button>
-      <Button size="sm" {...defaultProps}>
-        Small
-      </Button>
-      <Button {...defaultProps}>Medium</Button>
-      <Button size="lg" {...defaultProps}>
+      <Button size="lg" kind="primary" sx={{ mx: 2 }}>
         Large
       </Button>
     </Box>
   ))
-  .add("block", () => (
-    <Box sx={{ width: "2/3" }}>
-      <Button block variant="primary" {...defaultProps}>
-        Submit
-      </Button>
-    </Box>
-  ))
-  .add("loading", () => (
+  .add("with isLoading", () => (
     <Box>
-      <Button loading variant="primary" size="sm" {...defaultProps}>
+      <Button isLoading kind="primary" size="sm" sx={{ mx: 2 }}>
         Small
       </Button>
-      <Button loading variant="primary" {...defaultProps}>
+      <Button isLoading kind="primary" size="md" sx={{ mx: 2 }}>
         Medium
       </Button>
-      <Button loading variant="primary" size="lg" {...defaultProps}>
+      <Button isLoading kind="primary" size="lg" sx={{ mx: 2 }}>
         Large
       </Button>
-      <Button loading size="sm" {...defaultProps}>
+      <Button isLoading kind="secondary" size="sm" sx={{ mx: 2 }}>
         Small
       </Button>
-      <Button loading {...defaultProps}>
+      <Button isLoading kind="secondary" size="md" sx={{ mx: 2 }}>
         Medium
       </Button>
-      <Button loading size="lg" {...defaultProps}>
+      <Button isLoading kind="secondary" size="lg" sx={{ mx: 2 }}>
         Large
       </Button>
     </Box>

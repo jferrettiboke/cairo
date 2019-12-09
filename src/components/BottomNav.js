@@ -12,7 +12,7 @@ export function BottomNav({ sx, ...rest }) {
         alignItems: "center",
         borderTop: "1px solid",
         // Theme
-        borderColor: "gray.200",
+        borderColor: "divider",
         width: "full",
         // Extend
         ...sx
@@ -32,7 +32,7 @@ export function BottomNavLink({ children, icon, sx, ...rest }) {
         justifyContent: "center",
         // Theme
         p: "3",
-        color: "black",
+        color: "text",
         textDecoration: "none",
         // Extend
         ...sx

@@ -1,10 +1,10 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui";
+import React from "react";
+import { useThemeUI } from "theme-ui";
 
-function Textarea({ sx, ...rest }) {
-  return (
-    <textarea sx={{ variant: "styles.textarea.default", ...sx }} {...rest} />
-  );
+import Box from "../Box";
+
+export default function Textarea({ sx, ...rest }) {
+  const { theme } = useThemeUI();
+  const { textarea } = theme.forms;
+  return <Box as="textarea" sx={{ ...textarea, ...sx }} {...rest} />;
 }
-
-export default Textarea;

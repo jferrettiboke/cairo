@@ -47,7 +47,7 @@ storiesOf("Animations", module)
     return (
       <motion.ul initial="hidden" animate="visible" variants={ul}>
         {items.map((item, i) => (
-          <motion.li custom={i} animate="visible" variants={li}>
+          <motion.li key={i} custom={i} animate="visible" variants={li}>
             {item}
           </motion.li>
         ))}

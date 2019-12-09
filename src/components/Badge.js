@@ -1,39 +1,26 @@
 import React from "react";
+import { useThemeUI } from "theme-ui";
+import { Button as TUI_Button } from "@theme-ui/components";
+
 import Box from "./Box";
 
-const variants = {
-  default: {
-    // Theme
-    bg: "black"
-  },
-  success: {
-    bg: "blue.600"
-  },
-  error: {
-    bg: "red.600"
-  },
-  warning: {
-    bg: "yellow.600"
-  }
-};
-
-export default function Badge({ sx, variant, ...rest }) {
+export default function Badge({ sx, kind, ...rest }) {
+  const { theme } = useThemeUI();
+  const { kinds } = theme.badges;
   return (
     <Box
       as="span"
       sx={{
-        // Raw
         display: "inline-block",
         textTransform: "uppercase",
-        // Theme
-        color: "white",
         borderRadius: "full",
         fontSize: "xs",
-        py: "1",
-        px: "2",
-        // Custom,
-        ...(variants[variant] || variants.default),
-        // Extend
+        height: 5,
+        minWidth: 5,
+        textAlign: "center",
+        px: 1,
+        ...kinds._common,
+        ...kinds[kind || kinds._default],
         ...sx
       }}
       {...rest}

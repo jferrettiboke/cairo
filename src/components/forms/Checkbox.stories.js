@@ -2,7 +2,7 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 
 import Box from "../Box";
-import Select from "./Select";
+import Checkbox from "./Checkbox";
 
 function CenterDecorator(storyFn) {
   return (
@@ -14,18 +14,15 @@ function CenterDecorator(storyFn) {
         alignItems: "center"
       }}
     >
-      <Box sx={{ width: ["100%", "75%", "50%"] }}>{storyFn()}</Box>
+      <Box>{storyFn()}</Box>
     </Box>
   );
 }
 
-storiesOf("Components/Forms/Select", module)
+storiesOf("Components/Forms/Checkbox", module)
   .addDecorator(CenterDecorator)
-  .add("normal", () => (
-    <Select>
-      <option>Select an option</option>
-      <option>Option 1</option>
-      <option>Option 2</option>
-      <option>Option 3</option>
-    </Select>
-  ));
+  .add("normal", () => {
+    return <Checkbox name="cheese" value="yes" />;
+  })
+
+  .add("disabled", () => <Checkbox value="john@gmail.com" disabled />);

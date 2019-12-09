@@ -2,6 +2,7 @@ import React from "react";
 import { storiesOf } from "@storybook/react";
 
 import Box from "./Box";
+import Code from "./Code";
 
 function CenterDecorator(storyFn) {
   return (
@@ -13,24 +14,21 @@ function CenterDecorator(storyFn) {
         alignItems: "center"
       }}
     >
-      <Box>{storyFn()}</Box>
+      <Box sx={{ width: "1/2" }}>{storyFn()}</Box>
     </Box>
   );
 }
 
-storiesOf("Components/Box", module)
+storiesOf("Components/Code", module)
   .addDecorator(CenterDecorator)
-  .add("default", () => (
-    <Box
-      sx={{
-        bg: "gray.900",
-        borderRadius: "lg",
-        color: "white",
-        fontSize: "2xl",
-        p: "20",
-        textGradient: "cold"
-      }}
-    >
-      Hello world!
-    </Box>
-  ));
+  .add("default", () => {
+    return (
+      <Code language="jsx">{`
+import React from "react";
+
+// Hello component
+export default function Hello({ name }) {
+  return <div>Hello {name}</div>;
+}`}</Code>
+    );
+  });

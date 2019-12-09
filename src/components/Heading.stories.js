@@ -1,10 +1,11 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 
+import Box from "./Box";
 import Heading from "./Heading";
 
 storiesOf("Components/Heading", module).add("sizes", () => (
-  <>
+  <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
     <Heading as="h1" size="2xl">
       Hello world!
     </Heading>
@@ -23,5 +24,5 @@ storiesOf("Components/Heading", module).add("sizes", () => (
     <Heading as="h6" size="xs">
       Hello world!
     </Heading>
-  </>
+  </Box>
 ));

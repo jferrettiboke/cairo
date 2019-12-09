@@ -11,7 +11,7 @@ const toastReducer = (state, action) => {
         {
           id: action.id,
           content: action.content,
-          variant: action.variant,
+          kind: action.kind,
           metadata: action.metadata
         }
       ];
@@ -47,14 +47,14 @@ export default function useToaster(delay) {
     return dispatch({ type: "remove", id });
   }
 
-  function addToast({ content, variant, metadata }) {
+  function addToast({ content, kind, metadata }) {
     uid += 1;
     startTimer(uid, removeToast, delay || 5000);
     dispatch({
       type: "add",
       id: uid,
       content,
-      variant,
+      kind,
       metadata
     });
   }
@@ -70,12 +70,12 @@ export default function useToaster(delay) {
           mr: "5"
         }}
       >
-        {toastList.map(({ id, content, variant, metadata }) => {
+        {toastList.map(({ id, content, kind, metadata }) => {
           const remove = () => dismiss(id, removeToast);
           return (
             <Notification
               key={id}
-              variant={variant}
+              kind={kind}
               onClick={remove}
               sx={{ my: "5" }}
             >

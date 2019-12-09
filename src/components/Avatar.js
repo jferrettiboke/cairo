@@ -1,29 +1,16 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui";
+import React from "react";
+import { useThemeUI } from "theme-ui";
+import { Avatar as TUI_Avatar } from "@theme-ui/components";
 
-import Image from "./Image";
-
-const sizes = {
-  sm: { width: "8", height: "8" },
-  md: { width: "16", height: "16" },
-  lg: { width: "32", height: "32" }
-};
-
-function Avatar({ size, sx, ...rest }) {
+export default function Avatar({ sx, size, ...rest }) {
+  const { theme } = useThemeUI();
   return (
-    <Image
+    <TUI_Avatar
       sx={{
-        borderRadius: "full",
-
-        // Raw
-        boxSizing: "border-box",
-
-        ...(sizes[size] || sizes.md),
+        ...theme.avatars.sizes[size],
         ...sx
       }}
       {...rest}
     />
   );
 }
-
-export default Avatar;
