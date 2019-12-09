@@ -1,5 +1,3 @@
-// import prism from "@theme-ui/prism/presets/vs-dark.json";
-
 const baseColors = {
   black: "#000",
   white: "#fff",
@@ -578,9 +576,6 @@ const styles = {
     WebkitFontSmoothing: "antialiased",
     MozOsxFontSmoothing: "grayscale"
   }
-  // pre: {
-  //   ...prism
-  // }
 };
 
 const theme = {
