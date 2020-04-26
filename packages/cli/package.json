@@ -1,0 +1,35 @@
+{
+  "name": "cairo",
+  "version": "0.0.0",
+  "description": "Build consistent, themeable, type-safe, accessible React apps and websites with ease, confidence, and speed.",
+  "author": "Jesús Ferretti <jferrettiboke@gmail.com>",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
+  "bin": "./dist/index.js",
+  "repository": "https://github.com/jferrettiboke/cairo",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup -c",
+    "watch": "rollup -cw"
+  },
+  "dependencies": {
+    "chalk": "^4.0.0",
+    "chokidar": "^3.3.1",
+    "prettier": "^2.0.5",
+    "yargs": "^15.3.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@types/prettier": "^2.0.0",
+    "@types/yargs": "^15.0.4",
+    "babel-loader": "^8.1.0",
+    "rollup": "^2.7.2",
+    "rollup-plugin-preserve-shebangs": "^0.2.0",
+    "rollup-plugin-typescript2": "^0.27.0",
+    "typescript": "^3.8.3"
+  }
+}
