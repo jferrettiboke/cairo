@@ -1,5 +1,3 @@
-import commonjs from "rollup-plugin-commonjs";
-// import nodeResolve from "rollup-plugin-node-resolve";
 import typescript from "rollup-plugin-typescript2";
 import pkg from "./package.json";
 
@@ -20,18 +18,6 @@ export default {
     ...Object.keys(pkg.peerDependencies || {}),
   ],
   plugins: [
-    commonjs({
-      include: "node_modules/**",
-      namedExports: {
-        "./node_modules/react/react.js": [
-          "cloneElement",
-          "createElement",
-          "PropTypes",
-          "Children",
-          "Component",
-        ],
-      },
-    }),
     typescript({
       clean: true,
       typescript: require("typescript"),
