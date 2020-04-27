@@ -1,1 +1,1 @@
-packages/cairo/README.md
+packages/cli/README.md
