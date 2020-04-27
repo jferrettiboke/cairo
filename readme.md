@@ -1,5 +1,17 @@
 # 🔺 Cairo
 
+<p align="left">
+  <a aria-label="Creator" href="https://github.com/jferrettiboke">
+    <img src="https://img.shields.io/badge/MADE%20BY%20Jesús%20Ferretti-000000.svg?style=for-the-badge&logo=Logo&labelColor=000000&logoWidth=20">
+  </a>
+  <a aria-label="NPM version" href="https://www.npmjs.com/package/cairo">
+    <img alt="" src="https://img.shields.io/npm/v/cairo.svg?style=for-the-badge&labelColor=000000">
+  </a>
+  <a aria-label="License" href="https://github.com/jferrettiboke/cairo/blob/master/LICENSE">
+    <img alt="" src="https://img.shields.io/npm/l/cairo.svg?style=for-the-badge&labelColor=000000">
+  </a>
+</p>
+
 Introducing Cairo. A React.js Design System with an auto-generated Design System from your specs.
 
 Make all your components look like how you want, let Cairo handles the rest for you, including functionality, accessibility, API design, auto-generated code with TypeScript support, and many more. Superior DX and UX.
