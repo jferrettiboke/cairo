@@ -1,5 +1,6 @@
 {
   "name": "cairo-www",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
     "dev": "next",
@@ -15,7 +16,7 @@
   "devDependencies": {
     "@types/node": "^13.13.4",
     "@types/react": "^16.9.34",
-    "cairo": "0.1.0-alpha.0",
+    "cairo": "^0.1.0-alpha.0",
     "typescript": "^3.8.3"
   }
 }

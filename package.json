@@ -1,7 +1,31 @@
 {
   "name": "root",
   "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "cli": "lerna exec --scope cairo -- yarn watch",
+    "cli:build": "lerna exec --scope cairo -- yarn build",
+    "primitives": "lerna exec --scope cairo-primitives -- yarn watch",
+    "primitives:build": "lerna exec --scope cairo-primitives -- yarn build",
+    "primitives:storybook": "lerna exec --scope cairo-primitives -- yarn storybook",
+    "website": "lerna exec --scope cairo-www -- yarn dev",
+    "website:build": "lerna exec --scope cairo-www -- yarn build",
+    "website:start": "lerna exec --scope cairo-www -- yarn start",
+    "build": "yarn cli:build && yarn primitives:build",
+    "prettier": "prettier ./**/*.{js,jsx,ts,tsx,json,yml,yaml,css,md,mdx} --write",
+    "//lint": "eslint './packages/**/*.{js,jsx,ts,tsx}'",
+    "clean": "npm run clean-logs && npm run clean-modules",
+    "clean-logs": "rimraf ./packages/*/npm-debug* && rimraf ./*-debug*",
+    "clean-modules": "rimraf ./packages/*/node_modules/ && rimraf ./node_modules/",
+    "release": "lerna publish"
+  },
   "devDependencies": {
-    "lerna": "^3.20.2"
+    "lerna": "^3.20.2",
+    "prettier": "^2.0.5",
+    "rimraf": "^3.0.2"
   }
 }
