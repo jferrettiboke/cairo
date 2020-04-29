@@ -12,11 +12,11 @@
   </a>
 </p>
 
-Introducing Cairo. A React.js Design System with an auto-generated Design System from your specs.
+Cairo helps you generate a production-ready React.js component library from your specs, with a command.
 
-Make all your components look like how you want, let Cairo handles the rest for you, including functionality, accessibility, API design, auto-generated code with TypeScript support, and many more. Superior DX and UX.
+Build consistent, themeable, type-safe, accessible React apps and websites with ease, confidence, and speed.
 
-Try it today, and build consistent, themeable, type-safe, accessible React apps and websites with ease, confidence, and speed.
+Make all your components look like how you want, let Cairo handles the rest for you, including functionality, accessibility, API design, auto-generated code with TypeScript support, and many more. Superior DX and UX. Always.
 
 ## Features
 
@@ -28,7 +28,7 @@ Try it today, and build consistent, themeable, type-safe, accessible React apps 
 
 ## Why
 
-I make products, and it is tedious to write and maintain components across products. Having one central design system improves the workflow.
+When building products, it is tedious to write and maintain components across products, ensure best practices, and many more things. Having one central design system improves the workflow drastically.
 
 - Build products and iterate faster
 - Waste less time maintaining design systems for each product
@@ -38,6 +38,26 @@ I make products, and it is tedious to write and maintain components across produ
 - Accessibility: ensuring content is usable by and for everyone
 - Performance: ensuring fast load times for the end user
 - Developer experience: ensuring superior DX
+
+## TODOs
+
+**`cairo-primitives`**
+
+- [x] Define first components
+- [ ] Give good defaults
+- [ ] Make components accessible
+- [ ] Make custom props responsive
+
+**`cairo`**
+
+- [ ] Generate PropTypes
+- [ ] Generate TypeScript types/interfaces
+- [ ] Generate docs
+
+**Examples**
+
+- [ ] Replicate ZEIT Design
+- [ ] Replicate Stripe Design
 
 ## Contribute
 
