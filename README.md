@@ -16,7 +16,7 @@ Cairo helps you generate a production-ready React.js component library from your
 
 Build consistent, themeable, type-safe, accessible React apps and websites with ease, confidence, and speed.
 
-Make all your components look like how you want, let Cairo handles the rest for you, including functionality, accessibility, API design, auto-generated code with TypeScript support, and many more. Superior DX and UX. Always.
+Make all your components look like how you want, let Cairo handles the rest, including functionality, accessibility, API design, auto-generated code with TypeScript support, and many more. Superior DX and UX. Always.
 
 ## Features
 
@@ -50,8 +50,8 @@ When building products, it is tedious to write and maintain components across pr
 
 **`cairo`**
 
-- [ ] Generate PropTypes
-- [ ] Generate TypeScript types/interfaces
+- [x] Generate PropTypes
+- [x] Generate TypeScript types/interfaces
 - [ ] Generate docs
 
 **Examples**
