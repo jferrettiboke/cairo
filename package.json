@@ -21,7 +21,8 @@
     "clean": "npm run clean-logs && npm run clean-modules",
     "clean-logs": "rimraf ./packages/*/npm-debug* && rimraf ./*-debug*",
     "clean-modules": "rimraf ./packages/*/node_modules/ && rimraf ./node_modules/",
-    "release": "lerna publish"
+    "release": "lerna publish",
+    "release-canary": "lerna publish --canary --force-publish"
   },
   "devDependencies": {
     "lerna": "^3.20.2",
