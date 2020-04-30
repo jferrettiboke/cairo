@@ -1,6 +1,6 @@
 [![Cairo](./cairo.jpg)](https://cairo.now.sh)
 
-<p align="left">
+<p align="center">
   <a aria-label="Creator" href="https://github.com/jferrettiboke">
     <img src="https://img.shields.io/badge/MADE%20BY%20Jesús%20Ferretti-000000.svg?style=for-the-badge&logo=Logo&labelColor=000000&logoWidth=20">
   </a>
