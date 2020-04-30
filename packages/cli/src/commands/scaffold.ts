@@ -1,5 +1,5 @@
 import chalk from "chalk";
 
-export function scaffold() {
+export default () => {
   console.log(chalk.yellow("Scaffolding..."));
-}
+};

@@ -1,9 +1,8 @@
 #!/usr/bin/env node
 import path from "path";
-import chokidar from "chokidar";
 import yargs from "yargs";
-import chalk from "chalk";
-import generate from "./lib/generate";
+import generate from "./commands/generate";
+import log from "./utils/log";
 
 const { argv } = yargs.options({
   i: { type: "string", alias: "inputPath", description: "Config file path" },
@@ -16,30 +15,16 @@ let { i: inputPath, o: outputPath, w: watch } = argv;
 inputPath = path.resolve(process.cwd(), inputPath || "");
 outputPath = path.resolve(process.cwd(), outputPath || "", "generated");
 
-function requireUncached(module: string) {
-  delete require.cache[require.resolve(module)];
-  return require(module);
+switch (argv._[0]) {
+  case "generate":
+    generate({ watch, inputPath, outputPath });
+    break;
+
+  case "lint":
+    log.warning("This feature has not been implemented yet");
+    break;
+
+  default:
+    log.error("Error: Unknown command");
+    break;
 }
-
-if (watch) {
-  console.log(`\n${chalk.cyan("Watching...")}`);
-
-  chokidar
-    .watch(inputPath, {
-      ignored: outputPath,
-      // persistent: true,
-      // awaitWriteFinish: {
-      //   stabilityThreshold: 2000,
-      //   pollInterval: 100,
-      // },
-    })
-    .on("change", (path, stats) => {
-      // Bug: requires are cached
-      const configFile = requireUncached(inputPath as string);
-
-      console.log(`> Changes on ${path}`);
-      generate(configFile, outputPath as string);
-    });
-}
-
-generate(requireUncached(inputPath), outputPath as string);

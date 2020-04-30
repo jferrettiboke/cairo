@@ -1,5 +1,5 @@
 import Layout from "../components/layout";
-import { Button } from "../generated/Button";
+import { Button } from "../components/generated";
 
 export default function HomePage() {
   return (

@@ -5,11 +5,13 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "cairo-generate": "cairo generate -i theme/ -o components/"
   },
   "dependencies": {
     "cairo-primitives": "0.1.0-alpha.0",
     "next": "^9.3.5",
+    "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
