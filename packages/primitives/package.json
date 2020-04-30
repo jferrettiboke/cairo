@@ -1,6 +1,6 @@
 {
   "name": "cairo-primitives",
-  "version": "0.1.0-alpha.1",
+  "version": "0.1.0-alpha.2",
   "description": "",
   "author": "Jesús Ferretti <jferrettiboke@gmail.com>",
   "main": "dist/index.js",
