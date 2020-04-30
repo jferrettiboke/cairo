@@ -52,9 +52,10 @@ When building products, it is tedious to write and maintain components across pr
 
 **`cairo`**
 
-- [x] Generate PropTypes
-- [x] Generate TypeScript types/interfaces
-- [ ] Generate docs
+- [x] Generate components (styling, prop types, TypeScript support...)
+- [ ] Generate Styleguide (theme, components, playground...): `cairo generate --styleguide`
+- [ ] 🤔 Generate and publish to NPM: `cairo generate --npm`
+- [ ] 🤔 Lint (theme, components...): `cairo lint`
 
 **Examples**
 
@@ -77,4 +78,22 @@ Made with ❤️ by [Jesús Ferretti](https://twitter.com/jferrettiboke)
 
 ## Documentation
 
-TBD
+## Getting Started
+
+### Installation
+
+Use `npm i -D cairo` or `yarn add -D cairo` to install Cairo as a dev dependency.
+
+### Usage
+
+You just need to indicate the main entry point for the theme.
+
+`cairo generate -i theme/`
+
+With a specific output path:
+
+`cairo generate -i theme/ -o /components`
+
+This will generate all components at `components/generated/`. If you don't specify the output path, it will generate all files at the current working directory, `generated/`.
+
+To check all options, please execute `cairo --help` in your terminal.
