@@ -120,10 +120,10 @@ import { Button, Box, Text } from "../components/generated";
 
 export default function HomePage() {
   return (
-    <Box>
+    <Box sx={{ p: [2, 4, 6] }}>
       <Text as="p">Hello world!</Text>
       <Box>
-        <Button>My awesome button</Button>
+        <Button variant="primary">My awesome button</Button>
       </Box>
     </Box>
   );
