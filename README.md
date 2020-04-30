@@ -84,7 +84,7 @@ Made with ❤️ by [Jesús Ferretti](https://twitter.com/jferrettiboke)
 
 Use `npm i -D cairo` or `yarn add -D cairo` to install Cairo as a dev dependency.
 
-### Usage
+### Generate
 
 You just need to indicate the main entry point for the theme.
 
@@ -97,3 +97,35 @@ With a specific output path:
 This will generate all components at `components/generated/`. If you don't specify the output path, it will generate all files at the current working directory, `generated/`.
 
 To check all options, please execute `cairo --help` in your terminal.
+
+### Usage
+
+After generating all components, you can use them easily.
+
+First, be sure to use the provider component.
+
+```jsx
+import { CairoProvider } from "cairo-primitives";
+import theme from "../theme";
+
+export default function App({ children }) {
+  return <CairoProvider theme={theme}>{children}</CairoProvider>;
+}
+```
+
+And then, use any generated component you want.
+
+```jsx
+import { Button, Box, Text } from "../components/generated";
+
+export default function HomePage() {
+  return (
+    <Box>
+      <Text as="p">Hello world!</Text>
+      <Box>
+        <Button>My awesome button</Button>
+      </Box>
+    </Box>
+  );
+}
+```
