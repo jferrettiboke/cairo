@@ -43,19 +43,19 @@ When building products, it is tedious to write and maintain components across pr
 
 ## TODOs
 
-**`cairo-primitives`**
-
-- [x] Define first components
-- [ ] Give good defaults
-- [ ] Make components accessible
-- [ ] Make custom props responsive
-
-**`cairo`**
+**CLI**
 
 - [x] Generate components (styling, prop types, TypeScript support...)
 - [ ] Generate Styleguide (theme, components, playground...): `cairo generate --styleguide`
 - [ ] 🤔 Generate and publish to NPM: `cairo generate --npm`
 - [ ] 🤔 Lint (theme, components...): `cairo lint`
+
+**Primitives**
+
+- [x] Define first components
+- [ ] Give good defaults
+- [ ] Make components accessible
+- [ ] Make custom props responsive
 
 **Examples**
 
