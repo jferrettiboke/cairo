@@ -1,4 +1,4 @@
-# 🔺 Cairo
+[![Cairo](./cairo.jpg)](https://cairo.now.sh)
 
 <p align="left">
   <a aria-label="Creator" href="https://github.com/jferrettiboke">
@@ -11,6 +11,8 @@
     <img alt="" src="https://img.shields.io/npm/l/cairo.svg?style=for-the-badge&labelColor=000000">
   </a>
 </p>
+
+## Description
 
 Cairo helps you generate a production-ready React.js component library from your specs, with a command.
 
