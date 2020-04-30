@@ -56,7 +56,7 @@ When building products, it is tedious to write and maintain components across pr
 
 **Examples**
 
-- [ ] Replicate ZEIT Design
+- [ ] Replicate Vercel Design
 - [ ] Replicate Stripe Design
 
 ## Contribute
