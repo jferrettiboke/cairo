@@ -78,13 +78,13 @@ Made with ❤️ by [Jesús Ferretti](https://twitter.com/jferrettiboke)
 
 ## Documentation
 
-## Getting Started
+### Getting Started
 
-### Installation
+#### Installation
 
 Use `npm i -D cairo` or `yarn add -D cairo` to install Cairo as a dev dependency.
 
-### Generate
+#### Generate
 
 You just need to indicate the main entry point for the theme.
 
@@ -98,7 +98,7 @@ This will generate all components at `components/generated/`. If you don't speci
 
 To check all options, please execute `cairo --help` in your terminal.
 
-### Usage
+#### Usage
 
 After generating all components, you can use them easily.
 
