@@ -31,10 +31,10 @@ export const CodeBlock = React.forwardRef(
               color: "black",
             },
             ".atrule, .attr-value, .keyword": {
-              color: "warning.default",
+              color: "orange",
             },
             ".selector, .attr-name, .string, .char, .builtin, .inserted": {
-              color: "success.default",
+              color: "blue",
             },
           },
           ...sx,

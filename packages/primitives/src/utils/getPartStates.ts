@@ -27,6 +27,10 @@ export default function getPartStates(
     ...s,
   };
 
+  if (Object.entries(styleConfig.variants || {}).length <= 0) {
+    return states;
+  }
+
   // Variants
   Object.keys(styleConfig.variants).forEach((key: string) => {
     let variantStates = {}; // common + default or X

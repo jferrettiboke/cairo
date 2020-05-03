@@ -4,7 +4,6 @@ import useStyleConfig from "../hooks/use-style-config";
 
 export type BadgeProps = BoxProps & {
   styleConfig?: any;
-  [k: string]: any;
 };
 
 export const Badge = React.forwardRef<HTMLSpanElement, BadgeProps>(
@@ -14,14 +13,14 @@ export const Badge = React.forwardRef<HTMLSpanElement, BadgeProps>(
 
     return (
       <Box
+        as="span"
         {...props}
         ref={forwardedRef}
         data-part-id="badge"
         sx={{
-          display: "inline-block",
-          ...styleConfig.base.badge._normal,
-          ...badge._common._normal,
-          ...badge._normal,
+          ...styleConfig?.base.badge?._normal,
+          ...badge?._common?._normal,
+          ...badge?._normal,
           ...sx,
         }}
       />
