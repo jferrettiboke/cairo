@@ -14,6 +14,7 @@ export { Image } from "./components/Image";
 export { Input } from "./components/Input";
 export { Link, LinkProps } from "./components/Link";
 export { Select, SelectOption } from "./components/Select";
+export { Skeleton } from "./components/Skeleton";
 export { Table, Thead, Tbody, Tr, Th, Td } from "./components/Table";
 export { Text } from "./components/Text";
 export { Textarea } from "./components/Textarea";
