@@ -20,7 +20,7 @@ export default function getPartStates(
     _hover: {},
     _focus: {},
     _disabled: {},
-    _isWaiting: {},
+    _waiting: {},
   };
   let states = {
     _common: { ...s },

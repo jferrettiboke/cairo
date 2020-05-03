@@ -108,6 +108,8 @@ export default {
           _focus: {
             boxShadow: `${theme.colors.blue} 0px 0px 0px 1px inset`,
           },
+          _disabled: {},
+          _waiting: {},
         },
       },
     },

@@ -7,13 +7,17 @@ import useStyleConfig from "../hooks/use-style-config";
 import { LoadingDots } from "./LoadingDots";
 
 export type ButtonProps = ButtonPrimitiveProps & {
+  disabled?: boolean;
+  waiting?: boolean;
   styleConfig?: any;
-  isWaiting: boolean;
-  [k: string]: any;
+  whenWaiting?: React.ReactNode;
 };
 
 export const Button = React.forwardRef<HTMLSpanElement, ButtonProps>(
-  ({ children, disabled, isWaiting, sx, ...props }, forwardedRef: any) => {
+  (
+    { children, disabled, waiting, whenWaiting, sx, ...props },
+    forwardedRef: any
+  ) => {
     const { styleConfig, getPartStates } = useStyleConfig("Button", props);
     const button = getPartStates("button");
 
@@ -22,38 +26,42 @@ export const Button = React.forwardRef<HTMLSpanElement, ButtonProps>(
         {...props}
         ref={forwardedRef}
         data-part-id="button"
-        disabled={isWaiting}
+        disabled={disabled || waiting}
         sx={{
-          ...styleConfig.base.button._normal,
-          ...button._common._normal,
-          ...button._normal,
+          cursor: "pointer",
+          ...styleConfig?.base?.button?._normal,
+          ...button?._common?._normal,
+          ...button?._normal,
           ...(disabled && {
-            ...styleConfig.base.button._disabled,
-            ...button._common._disabled,
-            ...button._disabled,
+            cursor: "not-allowed",
+            ...styleConfig?.base?.button?._disabled,
+            ...button?._common?._disabled,
+            ...button?._disabled,
           }),
-          ...(isWaiting && {
-            ...styleConfig.base.button._isWaiting,
-            ...button._common._isWaiting,
-            ...button._isWaiting,
+          ...(waiting && {
+            cursor: "default",
+            ...styleConfig?.base?.button?._waiting,
+            ...button?._common?._waiting,
+            ...button?._waiting,
           }),
           ...(disabled !== true &&
-            isWaiting !== true && {
+            waiting !== true && {
               ":hover": {
-                ...styleConfig.base.button._hover,
-                ...button._common._hover,
-                ...button._hover,
+                ...styleConfig?.base?.button?._hover,
+                ...button?._common?._hover,
+                ...button?._hover,
               },
               ":focus": {
-                ...styleConfig.base.button._focus,
-                ...button._common._focus,
-                ...button._focus,
+                outline: "none",
+                ...styleConfig?.base?.button?._focus,
+                ...button?._common?._focus,
+                ...button?._focus,
               },
             }),
           ...sx,
         }}
       >
-        {isWaiting ? <LoadingDots /> : children}
+        {waiting ? whenWaiting || <LoadingDots /> : children}
       </ButtonPrimitive>
     );
   }
@@ -62,5 +70,5 @@ export const Button = React.forwardRef<HTMLSpanElement, ButtonProps>(
 Button.defaultProps = {
   styleConfig: {},
   disabled: false,
-  isWaiting: false,
+  waiting: false,
 };
