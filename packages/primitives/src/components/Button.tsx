@@ -8,14 +8,14 @@ import { LoadingDots } from "./LoadingDots";
 
 export type ButtonProps = ButtonPrimitiveProps & {
   disabled?: boolean;
-  waiting?: boolean;
   styleConfig?: any;
+  waiting?: boolean;
   whenWaiting?: React.ReactNode;
 };
 
-export const Button = React.forwardRef<HTMLSpanElement, ButtonProps>(
+export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
-    { children, disabled, waiting, whenWaiting, sx, ...props },
+    { children, disabled, sx, waiting, whenWaiting, ...props },
     forwardedRef: any
   ) => {
     const { styleConfig, getPartStates } = useStyleConfig("Button", props);
@@ -68,7 +68,7 @@ export const Button = React.forwardRef<HTMLSpanElement, ButtonProps>(
 );
 
 Button.defaultProps = {
-  styleConfig: {},
   disabled: false,
+  styleConfig: {},
   waiting: false,
 };
