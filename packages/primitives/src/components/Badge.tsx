@@ -13,8 +13,8 @@ export const Badge = React.forwardRef<HTMLSpanElement, BadgeProps>(
 
     return (
       <Box
-        as="span"
         {...props}
+        as="span"
         ref={forwardedRef}
         data-part-id="badge"
         sx={{
