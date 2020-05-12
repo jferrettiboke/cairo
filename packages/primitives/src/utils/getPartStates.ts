@@ -37,9 +37,11 @@ export default function getPartStates(
     const variant = styleConfig.variants[key];
 
     // Common
-    variantStates = merge(variantStates, {
-      _common: getStates(styleConfig, key, "_common", part),
-    });
+    if (props.hasOwnProperty(key)) {
+      variantStates = merge(variantStates, {
+        _common: getStates(styleConfig, key, "_common", part),
+      });
+    }
 
     if (props.hasOwnProperty(key)) {
       const value = props[key];
