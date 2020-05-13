@@ -14,6 +14,6 @@ export const Default = () => (
       p: [1, 2, 3],
     }}
   >
-    Hello world!
+    This is a box with styles
   </Box>
 );
