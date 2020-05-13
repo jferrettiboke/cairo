@@ -7,12 +7,7 @@ export default {
 };
 
 export const Default = () => (
-  <Box sx={{ '& > [data-part-id="link"]': { mr: "20px" } }}>
-    <Link href="#" title="Hi there!">
-      Ghost
-    </Link>
-    <Link href="#" title="Hi there!" variant="color">
-      Underline
-    </Link>
-  </Box>
+  <Link href="#" title="Hi there!">
+    Link
+  </Link>
 );

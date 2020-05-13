@@ -16,21 +16,22 @@ export const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
 
     return (
       <LinkPrimitive
+        {...props}
         ref={forwardedRef}
         data-part-id="link"
         sx={{
-          ...styleConfig.base.link._normal,
-          ...link._common._normal,
-          ...link._normal,
+          ...styleConfig?.base?.link?._normal,
+          ...link?._common?._normal,
+          ...link?._normal,
           ":hover": {
-            ...styleConfig.base.link._hover,
-            ...link._common._hover,
-            ...link._hover,
+            ...styleConfig?.base?.link?._hover,
+            ...link?._common?._hover,
+            ...link?._hover,
           },
           ":focus": {
-            ...styleConfig.base.link._focus,
-            ...link._common._focus,
-            ...link._focus,
+            ...styleConfig?.base?.link?._focus,
+            ...link?._common?._focus,
+            ...link?._focus,
           },
           ...sx,
         }}

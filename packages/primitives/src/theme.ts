@@ -113,5 +113,19 @@ export default {
         },
       },
     },
+    Link: {
+      base: {
+        link: {
+          _normal: {
+            color: theme.colors.black,
+            textDecoration: "underline",
+          },
+          _hover: {
+            textDecoration: "none",
+          },
+          _focus: {},
+        },
+      },
+    },
   },
 };
