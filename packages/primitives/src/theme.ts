@@ -127,5 +127,24 @@ export default {
         },
       },
     },
+    Textarea: {
+      base: {
+        textarea: {
+          _normal: {
+            border: "1px solid",
+            borderColor: theme.colors.gray300,
+            borderRadius: "3px",
+            p: "10px",
+          },
+          _hover: {},
+          _focus: {
+            borderColor: theme.colors.black,
+          },
+          _disabled: {
+            bg: theme.colors.gray100,
+          },
+        },
+      },
+    },
   },
 };
