@@ -3,21 +3,24 @@ import { Box } from "./Box";
 import useStyleConfig from "../hooks/use-style-config";
 
 export const Divider = React.forwardRef(({ sx, ...props }: any, ref: any) => {
-  //   const { styleConfig, getPartStates } = useStyleConfig("Divider", props);
-  //   const divider = getPartStates("divider");
+  const { styleConfig, getPartStates } = useStyleConfig("Divider", props);
+  const divider = getPartStates("divider");
 
   return (
     <Box
-      as="hr"
       {...props}
+      as="hr"
       ref={ref}
       data-part-id="divider"
       sx={{
         border: "none",
         height: "1px",
-        bg: "#edf2f7",
+        bg: "#eeeeee",
         m: "0px",
         width: "100%",
+        ...styleConfig?.base?.divider?._normal,
+        ...divider?._common?._normal,
+        ...divider?._normal,
         ...sx,
       }}
     />

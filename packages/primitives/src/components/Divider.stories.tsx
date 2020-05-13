@@ -6,4 +6,4 @@ export default {
   component: Divider,
 };
 
-export const Default = () => <Divider />;
+export const Default = () => <Divider sx={{ mt: "50vh" }} />;
