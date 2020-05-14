@@ -51,7 +51,28 @@ export default function getPartStates(
           getStates(styleConfig, key, value, part)
         );
       } else {
-        console.error(`${key}="${value}" does not exist.`);
+        console.error(`
+${key}="${value}" does not exist. Use instead:
+
+${Object.entries(variant)
+  .filter(([key]) => key !== "_default" && key !== "_common")
+  .map(([k]) => {
+    let output;
+    switch (k) {
+      case "true":
+        output = `${key}={true} or ${key}`;
+        break;
+      case "false":
+        output = `${key}={false} or just omit it`;
+        break;
+      default:
+        output = `${key}="${k}"`;
+        break;
+    }
+    return `- ${output}\n`;
+  })
+  .join("")}
+`);
       }
     } else {
       // Default variant
