@@ -36,6 +36,13 @@ export const Default = () => (
       <SelectOption value="option_3">Option 3</SelectOption>
     </Select>
 
+    <Select>
+      <SelectOption>Select an option</SelectOption>
+      <SelectOption value="option_1">Option 1</SelectOption>
+      <SelectOption value="option_2">Option 2</SelectOption>
+      <SelectOption value="option_3">Option 3</SelectOption>
+    </Select>
+
     <Select defaultValue="option_2">
       <SelectOption value="" />
       <SelectOption value="option_1">Option 1</SelectOption>
