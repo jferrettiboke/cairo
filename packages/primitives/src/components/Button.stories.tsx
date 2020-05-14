@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, ButtonProps } from "../";
+import { Box, Button, ButtonProps } from "../";
 
 function MyButton(props: ButtonProps) {
   return <Button whenWaiting="⏳" {...props} />;
@@ -8,14 +8,27 @@ function MyButton(props: ButtonProps) {
 export default {
   title: "Components/Button",
   component: Button,
+  decorators: [
+    (storyFn: any) => (
+      <Box
+        sx={{
+          height: "100vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        {storyFn()}
+      </Box>
+    ),
+  ],
 };
 
-export const Default = () => <Button>Action</Button>;
-
-export const Disabled = () => <Button disabled>Action</Button>;
-
-export const Waiting = () => <Button waiting>Action</Button>;
-
-export const WaitingWithCustomRender = () => (
-  <MyButton waiting>Submit</MyButton>
+export const Default = () => (
+  <Box sx={{ "& > *": { m: "10px !important" } }}>
+    <Button>Action</Button>
+    <Button disabled>Disabled</Button>
+    <Button waiting>Action</Button>
+    <MyButton waiting>Action</MyButton>
+  </Box>
 );

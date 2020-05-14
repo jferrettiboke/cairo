@@ -1,9 +1,23 @@
 import React from "react";
-import { CodeBlock } from "../";
+import { Box, CodeBlock } from "../";
 
 export default {
   title: "Components/CodeBlock",
   component: CodeBlock,
+  decorators: [
+    (storyFn: any) => (
+      <Box
+        sx={{
+          height: "100vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        {storyFn()}
+      </Box>
+    ),
+  ],
 };
 
 export const Default = () => (

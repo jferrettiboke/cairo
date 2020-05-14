@@ -113,6 +113,25 @@ export default {
         },
       },
     },
+    Input: {
+      base: {
+        input: {
+          _normal: {
+            border: "1px solid",
+            borderColor: theme.colors.gray300,
+            borderRadius: "3px",
+            p: "10px",
+          },
+          _hover: {},
+          _focus: {
+            borderColor: theme.colors.black,
+          },
+          _disabled: {
+            bg: theme.colors.gray100,
+          },
+        },
+      },
+    },
     Link: {
       base: {
         link: {
@@ -124,6 +143,25 @@ export default {
             textDecoration: "none",
           },
           _focus: {},
+        },
+      },
+    },
+    Select: {
+      base: {
+        select: {
+          _normal: {
+            border: "1px solid",
+            borderColor: theme.colors.gray300,
+            borderRadius: "3px",
+            p: "10px",
+          },
+          _hover: {},
+          _focus: {
+            borderColor: theme.colors.black,
+          },
+          _disabled: {
+            bg: theme.colors.gray100,
+          },
         },
       },
     },

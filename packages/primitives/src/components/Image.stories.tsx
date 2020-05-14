@@ -1,9 +1,23 @@
 import React from "react";
-import { Image } from "../";
+import { Box, Image } from "../";
 
 export default {
   title: "Components/Image",
   component: Image,
+  decorators: [
+    (storyFn: any) => (
+      <Box
+        sx={{
+          height: "100vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        {storyFn()}
+      </Box>
+    ),
+  ],
 };
 
 export const Default = () => (

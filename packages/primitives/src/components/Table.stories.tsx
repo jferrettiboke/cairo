@@ -1,9 +1,23 @@
 import React from "react";
-import { Table, Thead, Tbody, Tr, Th, Td } from "../";
+import { Box, Table, Thead, Tbody, Tr, Th, Td } from "../";
 
 export default {
   title: "Components/Table",
   component: Table,
+  decorators: [
+    (storyFn: any) => (
+      <Box
+        sx={{
+          height: "100vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        {storyFn()}
+      </Box>
+    ),
+  ],
 };
 
 export const Default = () => (

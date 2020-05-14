@@ -4,10 +4,24 @@ import { Box, Skeleton } from "../";
 export default {
   title: "Components/Skeleton",
   component: Skeleton,
+  decorators: [
+    (storyFn: any) => (
+      <Box
+        sx={{
+          height: "100vh",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        {storyFn()}
+      </Box>
+    ),
+  ],
 };
 
 export const Default = () => (
-  <Box sx={{ "& > * + *": { my: "10px" } }}>
+  <Box sx={{ "& > * + *": { my: "10px !important" } }}>
     <Skeleton
       sx={{ height: "100px", width: "100px", borderRadius: "9999px" }}
     />
