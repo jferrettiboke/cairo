@@ -7,6 +7,8 @@ import {
   // DividerProps as DividerPrimitiveProps,
 } from "cairo-primitives";
 
+export type DividerProps = {};
+
 // export type DividerProps = DividerPrimitiveProps & {
 //
 // };

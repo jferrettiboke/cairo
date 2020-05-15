@@ -7,6 +7,8 @@ import {
   // TextareaProps as TextareaPrimitiveProps,
 } from "cairo-primitives";
 
+export type TextareaProps = {};
+
 // export type TextareaProps = TextareaPrimitiveProps & {
 //
 // };

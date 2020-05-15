@@ -7,6 +7,8 @@ import {
   // BadgeProps as BadgePrimitiveProps,
 } from "cairo-primitives";
 
+export type BadgeProps = {};
+
 // export type BadgeProps = BadgePrimitiveProps & {
 //
 // };

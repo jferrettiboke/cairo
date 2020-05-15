@@ -7,6 +7,8 @@ import {
   // ContainerProps as ContainerPrimitiveProps,
 } from "cairo-primitives";
 
+export type ContainerProps = {};
+
 // export type ContainerProps = ContainerPrimitiveProps & {
 //
 // };

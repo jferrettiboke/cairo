@@ -7,6 +7,8 @@ import {
   // BoxProps as BoxPrimitiveProps,
 } from "cairo-primitives";
 
+export type BoxProps = {};
+
 // export type BoxProps = BoxPrimitiveProps & {
 //
 // };

@@ -7,6 +7,8 @@ import {
   // GridProps as GridPrimitiveProps,
 } from "cairo-primitives";
 
+export type GridProps = {};
+
 // export type GridProps = GridPrimitiveProps & {
 //
 // };

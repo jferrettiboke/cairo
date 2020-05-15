@@ -7,6 +7,8 @@ import {
   // CheckboxProps as CheckboxPrimitiveProps,
 } from "cairo-primitives";
 
+export type CheckboxProps = {};
+
 // export type CheckboxProps = CheckboxPrimitiveProps & {
 //
 // };

@@ -7,6 +7,8 @@ import {
   // CodeProps as CodePrimitiveProps,
 } from "cairo-primitives";
 
+export type CodeProps = {};
+
 // export type CodeProps = CodePrimitiveProps & {
 //
 // };

@@ -7,38 +7,20 @@ import {
   // LinkProps as LinkPrimitiveProps,
 } from "cairo-primitives";
 
+export type LinkProps = {};
+
 // export type LinkProps = LinkPrimitiveProps & {
-//   variant?: "default"|"color"
+//
 // };
 
 export const Link = React.forwardRef<any, any>((props, forwardedRef) => (
   <LinkPrimitive
     {...props}
     ref={forwardedRef}
-    styleConfig={{
-      base: {
-        link: { _normal: { textDecoration: "none" }, _hover: {}, _focus: {} },
-      },
-      variants: {
-        variant: {
-          _default: "default",
-          _common: { link: { _normal: {}, _hover: {}, _focus: {} } },
-          default: {
-            link: { _normal: { color: "inherit" }, _hover: {}, _focus: {} },
-          },
-          color: {
-            link: { _normal: { color: "#0070f3" }, _hover: {}, _focus: {} },
-          },
-        },
-      },
-    }}
+    styleConfig={{ base: {}, variants: {} }}
   />
 ));
 
-Link.defaultProps = {
-  variant: "default",
-};
+Link.defaultProps = {};
 
-Link.propTypes = {
-  variant: PropTypes.oneOf(["default", "color"]),
-};
+Link.propTypes = {};

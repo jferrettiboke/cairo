@@ -7,6 +7,8 @@ import {
   // SelectProps as SelectPrimitiveProps,
 } from "cairo-primitives";
 
+export type SelectProps = {};
+
 // export type SelectProps = SelectPrimitiveProps & {
 //
 // };

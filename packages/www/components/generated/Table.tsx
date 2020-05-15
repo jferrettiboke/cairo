@@ -7,6 +7,8 @@ import {
   // TableProps as TablePrimitiveProps,
 } from "cairo-primitives";
 
+export type TableProps = {};
+
 // export type TableProps = TablePrimitiveProps & {
 //
 // };

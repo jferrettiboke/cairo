@@ -7,6 +7,8 @@ import {
   // TextProps as TextPrimitiveProps,
 } from "cairo-primitives";
 
+export type TextProps = {};
+
 // export type TextProps = TextPrimitiveProps & {
 //
 // };

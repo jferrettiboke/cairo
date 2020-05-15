@@ -7,6 +7,8 @@ import {
   // InputProps as InputPrimitiveProps,
 } from "cairo-primitives";
 
+export type InputProps = {};
+
 // export type InputProps = InputPrimitiveProps & {
 //
 // };

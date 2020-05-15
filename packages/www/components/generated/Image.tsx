@@ -7,6 +7,8 @@ import {
   // ImageProps as ImagePrimitiveProps,
 } from "cairo-primitives";
 
+export type ImageProps = {};
+
 // export type ImageProps = ImagePrimitiveProps & {
 //
 // };
