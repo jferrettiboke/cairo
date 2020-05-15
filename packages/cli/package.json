@@ -1,6 +1,6 @@
 {
   "name": "cairo",
-  "version": "0.1.0-alpha.2",
+  "version": "0.1.0-alpha.3",
   "description": "Build consistent, themeable, type-safe, accessible React apps and websites with ease, confidence, and speed.",
   "author": "Jesús Ferretti <jferrettiboke@gmail.com>",
   "main": "dist/index.js",
