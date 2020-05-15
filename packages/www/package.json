@@ -1,6 +1,6 @@
 {
   "name": "cairo-www",
-  "version": "0.1.0-alpha.3",
+  "version": "0.1.0-alpha.4",
   "private": true,
   "scripts": {
     "dev": "next",
@@ -9,7 +9,7 @@
     "cairo-generate": "cairo generate -i theme/ -o components/"
   },
   "dependencies": {
-    "cairo-primitives": "^0.1.0-alpha.3",
+    "cairo-primitives": "^0.1.0-alpha.4",
     "next": "^9.4.0",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
