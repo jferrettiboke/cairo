@@ -1,5 +1,5 @@
 // import App from 'next/app'
-import { CairoProvider } from "cairo-primitives";
+import { Provider as CairoProvider } from "../components/generated";
 import theme from "../theme";
 
 function MyApp({ Component, pageProps }) {

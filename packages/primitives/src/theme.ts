@@ -131,48 +131,6 @@ export default {
           },
         },
       },
-      variants: {
-        errored: {
-          _default: "false",
-          _common: {},
-          false: {
-            input: {
-              _normal: {},
-            },
-          },
-          true: {
-            input: {
-              _normal: {
-                borderColor: "red",
-                borderWidth: "2px",
-              },
-            },
-          },
-        },
-        size: {
-          _default: "md",
-          _common: {
-            // input: {
-            //   // _normal: {},
-            // },
-          },
-          sm: {
-            input: {
-              _normal: { p: "5px", fontSize: "0.9em" },
-            },
-          },
-          md: {
-            input: {
-              _normal: { p: "10px" },
-            },
-          },
-          lg: {
-            input: {
-              _normal: { p: "15px", fontSize: "1.2em" },
-            },
-          },
-        },
-      },
     },
     Link: {
       base: {
