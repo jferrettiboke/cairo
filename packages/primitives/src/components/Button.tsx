@@ -18,7 +18,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     { children, disabled, sx, waiting, whenWaiting, ...props },
     forwardedRef: any
   ) => {
-    const { styleConfig, getPartStates } = useStyleConfig("Button", props);
+    const { getPartStates } = useStyleConfig("Button", props);
     const button = getPartStates("button");
 
     return (
@@ -29,34 +29,13 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         disabled={disabled || waiting}
         sx={{
           cursor: "pointer",
-          ...styleConfig?.base?.button?._normal,
-          ...button?._common?._normal,
           ...button?._normal,
-          ...(disabled && {
-            cursor: "not-allowed",
-            ...styleConfig?.base?.button?._disabled,
-            ...button?._common?._disabled,
-            ...button?._disabled,
-          }),
-          ...(waiting && {
-            cursor: "default",
-            ...styleConfig?.base?.button?._waiting,
-            ...button?._common?._waiting,
-            ...button?._waiting,
-          }),
+          ...(disabled && { cursor: "not-allowed", ...button?._disabled }),
+          ...(waiting && { cursor: "default", ...button?._waiting }),
           ...(disabled !== true &&
             waiting !== true && {
-              ":hover": {
-                ...styleConfig?.base?.button?._hover,
-                ...button?._common?._hover,
-                ...button?._hover,
-              },
-              ":focus": {
-                outline: "none",
-                ...styleConfig?.base?.button?._focus,
-                ...button?._common?._focus,
-                ...button?._focus,
-              },
+              ":hover": { ...button?._hover },
+              ":focus": { outline: "none", ...button?._focus },
             }),
           ...sx,
         }}

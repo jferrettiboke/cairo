@@ -8,7 +8,7 @@ export type BadgeProps = BoxProps & {
 
 export const Badge = React.forwardRef<HTMLSpanElement, BadgeProps>(
   ({ sx, ...props }, forwardedRef: any) => {
-    const { styleConfig, getPartStates } = useStyleConfig("Badge", props);
+    const { getPartStates } = useStyleConfig("Badge", props);
     const badge = getPartStates("badge");
 
     return (
@@ -18,8 +18,6 @@ export const Badge = React.forwardRef<HTMLSpanElement, BadgeProps>(
         ref={forwardedRef}
         data-part-id="badge"
         sx={{
-          ...styleConfig?.base.badge?._normal,
-          ...badge?._common?._normal,
           ...badge?._normal,
           ...sx,
         }}

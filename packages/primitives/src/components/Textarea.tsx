@@ -10,7 +10,7 @@ export type TextareaProps = TextareaPrimitiveProps & {
 
 export const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
   ({ disabled, sx, ...props }: any, ref: any) => {
-    const { styleConfig, getPartStates } = useStyleConfig("Textarea", props);
+    const { getPartStates } = useStyleConfig("Textarea", props);
     const textarea = getPartStates("textarea");
 
     return (
@@ -25,27 +25,11 @@ export const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
           fontFamily: "inherit",
           fontSize: "inherit",
           width: "100%",
-          ...styleConfig?.base?.textarea?._normal,
-          ...textarea?._common?._normal,
           ...textarea?._normal,
-          ...(disabled && {
-            cursor: "not-allowed",
-            ...styleConfig?.base?.textarea?._disabled,
-            ...textarea?._common?._disabled,
-            ...textarea?._disabled,
-          }),
+          ...(disabled && { cursor: "not-allowed", ...textarea?._disabled }),
           ...(disabled !== true && {
-            ":hover": {
-              ...styleConfig?.base?.textarea?._hover,
-              ...textarea?._common?._hover,
-              ...textarea?._hover,
-            },
-            ":focus": {
-              outline: "none",
-              ...styleConfig?.base?.textarea?._focus,
-              ...textarea?._common?._focus,
-              ...textarea?._focus,
-            },
+            ":hover": { ...textarea?._hover },
+            ":focus": { outline: "none", ...textarea?._focus },
           }),
           ...sx,
         }}

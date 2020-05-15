@@ -10,8 +10,8 @@ export type LinkProps = LinkPrimitiveProps & {
 };
 
 export const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
-  ({ children, sx, ...props }, forwardedRef: any) => {
-    const { styleConfig, getPartStates } = useStyleConfig("Link", props);
+  ({ sx, ...props }, forwardedRef: any) => {
+    const { getPartStates } = useStyleConfig("Link", props);
     const link = getPartStates("link");
 
     return (
@@ -20,25 +20,12 @@ export const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
         ref={forwardedRef}
         data-part-id="link"
         sx={{
-          ...styleConfig?.base?.link?._normal,
-          ...link?._common?._normal,
           ...link?._normal,
-          ":hover": {
-            ...styleConfig?.base?.link?._hover,
-            ...link?._common?._hover,
-            ...link?._hover,
-          },
-          ":focus": {
-            ...styleConfig?.base?.link?._focus,
-            ...link?._common?._focus,
-            ...link?._focus,
-          },
+          ":hover": { ...link?._hover },
+          ":focus": { ...link?._focus },
           ...sx,
         }}
-        {...props}
-      >
-        {children}
-      </LinkPrimitive>
+      />
     );
   }
 );

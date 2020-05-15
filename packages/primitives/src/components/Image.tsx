@@ -12,13 +12,13 @@ export type ImageProps = ImagePrimitiveProps & {
 export const Image = React.forwardRef<HTMLImageElement, ImageProps>(
   ({ sx, ...props }, forwardedRef: any) => (
     <ImagePrimitive
+      {...props}
       ref={forwardedRef}
       data-part-id="image"
       sx={{
         display: "block",
         ...sx,
       }}
-      {...props}
     />
   )
 );

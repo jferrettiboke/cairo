@@ -4,7 +4,7 @@ import useStyleConfig from "../hooks/use-style-config";
 
 export const Input = React.forwardRef(
   ({ disabled, sx, ...props }: any, ref: any) => {
-    const { styleConfig, getPartStates } = useStyleConfig("Input", props);
+    const { getPartStates } = useStyleConfig("Input", props);
     const input = getPartStates("input");
 
     return (
@@ -19,27 +19,11 @@ export const Input = React.forwardRef(
           fontFamily: "inherit",
           fontSize: "inherit",
           width: "100%",
-          ...styleConfig?.base?.input?._normal,
-          ...input?._common?._normal,
           ...input?._normal,
-          ...(disabled && {
-            cursor: "not-allowed",
-            ...styleConfig?.base?.input?._disabled,
-            ...input?._common?._disabled,
-            ...input?._disabled,
-          }),
+          ...(disabled && { cursor: "not-allowed", ...input?._disabled }),
           ...(disabled !== true && {
-            ":hover": {
-              ...styleConfig?.base?.input?._hover,
-              ...input?._common?._hover,
-              ...input?._hover,
-            },
-            ":focus": {
-              outline: "none",
-              ...styleConfig?.base?.input?._focus,
-              ...input?._common?._focus,
-              ...input?._focus,
-            },
+            ":hover": { ...input?._hover },
+            ":focus": { outline: "none", ...input?._focus },
           }),
           ...sx,
         }}
