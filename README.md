@@ -18,7 +18,7 @@ Cairo helps you generate a production-ready React.js component library from your
 
 Build consistent, themeable, type-safe, accessible React apps and websites with ease, confidence, and speed.
 
-Make all your components look like how you want, let Cairo handles the rest, including functionality, accessibility, API design, auto-generated code with TypeScript support, and many more. Superior DX and UX. Always.
+Make all your components look like how you want, let Cairo handles the rest, including functionality, accessibility, API design, auto-generated code with TypeScript support, and much more. Superior DX and UX. Always.
 
 ## Features
 
@@ -53,9 +53,9 @@ When building products, it is tedious to write and maintain components across pr
 **Primitives**
 
 - [x] Define first components
-- [ ] Give good defaults
-- [ ] Make components accessible
-- [ ] Make custom props responsive
+- [x] Make custom props responsive
+- [ ] Give good defaults (WIP)
+- [ ] Make components accessible (WIP)
 
 **Examples**
 
@@ -68,7 +68,7 @@ Please, do not hesitate to contribute to this project (it does not matter how sm
 
 ## FAQs
 
-TBD
+TODO
 
 ## Creator
 
@@ -83,6 +83,10 @@ Made with ❤️ by [Jesús Ferretti](https://twitter.com/jferrettiboke)
 #### Installation
 
 Use `npm i -D cairo` or `yarn add -D cairo` to install Cairo as a dev dependency.
+
+#### Specs file
+
+TODO
 
 #### Generate
 
@@ -105,7 +109,7 @@ After generating all components, you can use them easily.
 First, be sure to use the provider component.
 
 ```jsx
-import { CairoProvider } from "cairo-primitives";
+import { Provider as CairoProvider } from "../components/generated";
 import theme from "../theme";
 
 export default function App({ children }) {
