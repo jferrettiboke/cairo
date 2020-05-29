@@ -8,7 +8,7 @@ export default function Home() {
       <Header />
       <Box
         sx={{
-          minHeight: "100vh",
+          my: 6,
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
@@ -25,7 +25,7 @@ export default function Home() {
           C A I R O
         </Text>
         <Text as="h1" sx={{ textAlign: "center" }}>
-          Next-generation UI Framework.
+          Next-gen UI Framework.
           <br />
           Get more done by doing less.
         </Text>
