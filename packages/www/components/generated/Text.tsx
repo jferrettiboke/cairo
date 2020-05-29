@@ -7,36 +7,20 @@ import {
   // TextProps as TextPrimitiveProps,
 } from "cairo-primitives";
 
-export type TextProps = {
-  variant?: "default" | "h1";
-};
+export type TextProps = {};
 
 // export type TextProps = TextPrimitiveProps & {
-//   variant?: "default"|"h1"
+//
 // };
 
 export const Text = React.forwardRef<any, any>((props, forwardedRef) => (
   <TextPrimitive
     {...props}
     ref={forwardedRef}
-    styleConfig={{
-      base: { text: { _normal: {} } },
-      variants: {
-        variant: {
-          _default: "default",
-          _common: { text: { _normal: { fontWeight: "bold" } } },
-          default: { text: { _normal: {} } },
-          h1: { text: { _normal: { fontSize: "3em" } } },
-        },
-      },
-    }}
+    styleConfig={{ base: {}, variants: {} }}
   />
 ));
 
-Text.defaultProps = {
-  variant: "default",
-};
+Text.defaultProps = {};
 
-Text.propTypes = {
-  variant: PropTypes.oneOf(["default", "h1"]),
-};
+Text.propTypes = {};

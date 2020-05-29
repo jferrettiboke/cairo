@@ -6,7 +6,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "cairo-generate": "cairo generate -i theme/ -o components/"
+    "cairo-generate": "cairo generate -i theme/ -o components/",
+    "postinstall": "yarn cairo-generate"
   },
   "dependencies": {
     "cairo-primitives": "^0.1.0-alpha.4",
